@@ -3,10 +3,26 @@ import { Card } from "@/components/ui/card";
 import { Quote, GraduationCap, Wrench, Lightbulb, Sprout } from "lucide-react";
 
 const steps = [
-  { icon: GraduationCap, title: "Learn", text: "Absorb new tools, workflows, and team conventions." },
-  { icon: Wrench, title: "Apply", text: "Translate concepts into real tasks and contributions." },
-  { icon: Lightbulb, title: "Experience", text: "Encounter the messy reality of users, deadlines, and systems." },
-  { icon: Sprout, title: "Grow", text: "Reflect, refine, and step into the next role with confidence." },
+  {
+    icon: GraduationCap,
+    title: "Learn",
+    text: "Apply classroom knowledge to real-world IT environments and workflows.",
+  },
+  {
+    icon: Wrench,
+    title: "Apply",
+    text: "Turn theoretical concepts into actual system tasks and development work.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Experience",
+    text: "Face real workplace challenges such as deadlines, users, and system issues.",
+  },
+  {
+    icon: Sprout,
+    title: "Grow",
+    text: "Develop confidence, discipline, and professional readiness for future roles.",
+  },
 ];
 
 export default function Importance() {
@@ -14,46 +30,62 @@ export default function Importance() {
     <PageShell
       eyebrow="I. Introduction"
       title="Importance of the Internship"
-      description="Why on-the-job training is the bridge between academic theory and the working world."
+      description="Molding Future IT Professionals through real-world experience and exposure."
     >
       <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
         <article className="prose prose-neutral max-w-none dark:prose-invert">
           <p className="text-muted-foreground leading-relaxed">
-            On-the-Job Training is more than a graduation requirement — it is the moment a student steps out of the
-            classroom and into a real organization where decisions have weight, deadlines are real, and users are
-            depending on the work. For an IT student, that shift is transformative.
+            Internship plays a vital role in molding future IT professionals by
+            providing students with practical experience and real-world exposure
+            to the field of information technology. It allows trainees to apply
+            the knowledge and skills they have learned in the classroom to
+            actual workplace tasks and responsibilities.
           </p>
+
           <p className="text-muted-foreground leading-relaxed">
-            Internship exposes us to the unspoken parts of the profession: working with people across departments,
-            interpreting unclear requirements, communicating progress, and recovering gracefully from mistakes. These
-            are skills no exam can measure but every employer expects.
+            Through internship, students develop technical competencies,
+            problem-solving abilities, communication skills, and professional
+            work ethics that are essential in the IT industry. It also helps
+            them gain confidence, adapt to workplace environments, and
+            understand the expectations of their future careers.
           </p>
 
           <Card className="my-6 border-l-4 border-l-primary bg-accent/40 p-6 not-prose">
             <Quote className="mb-3 h-6 w-6 text-primary" />
             <p className="text-base font-medium italic">
-              "Tell me and I forget, teach me and I may remember, involve me and I learn."
+              "Internship is where knowledge meets reality and students become
+              professionals."
             </p>
-            <p className="mt-2 text-sm text-muted-foreground">— Benjamin Franklin</p>
           </Card>
 
           <p className="text-muted-foreground leading-relaxed">
-            At the Philippine Red Cross, my internship carries an additional weight: the systems we touch ultimately
-            support humanitarian operations. That context turns every small ticket into a meaningful contribution.
+            This experience makes students more prepared and competitive as
+            aspiring IT professionals, bridging the gap between academic
+            learning and real-world application.
           </p>
 
-          <h2 className="mt-8 text-xl font-bold font-display">The Learning Cycle</h2>
+          <h2 className="mt-8 text-xl font-bold font-display">
+            The Learning Cycle
+          </h2>
+
           <div className="mt-4 grid gap-3 sm:grid-cols-2 not-prose">
             {steps.map((s, i) => (
-              <Card key={s.title} className="p-5 transition-all hover:shadow-soft">
+              <Card
+                key={s.title}
+                className="p-5 transition-all hover:shadow-soft"
+              >
                 <div className="flex items-start gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                     <s.icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Step {i + 1}</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Step {i + 1}
+                    </p>
                     <h3 className="mt-0.5 font-semibold">{s.title}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">{s.text}</p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {s.text}
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -83,11 +115,13 @@ export default function Importance() {
               </div>
             </dl>
           </Card>
+
           <Card className="border-primary/20 bg-primary/5 p-6">
             <h3 className="font-semibold text-primary">Why It Matters</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              An internship doesn't just complete a curriculum — it completes a student. It is where competence,
-              character, and career first meet.
+              Internship is not just a requirement — it is the bridge between
+              academic learning and professional readiness, where students
+              transition into real IT practitioners.
             </p>
           </Card>
         </aside>

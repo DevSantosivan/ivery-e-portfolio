@@ -12,7 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import profile from "@/assets/profile.jpg";
+import profile from "@/assets/profile.png";
 
 const titleMap: Record<string, string> = {
   "/": "Overview",
@@ -41,11 +41,22 @@ export function Topbar() {
     <header className="sticky top-0 z-30 flex h-14 items-center gap-3 border-b border-border bg-background/80 px-4 backdrop-blur-md">
       <SidebarTrigger className="md:hidden" />
       <div className="flex flex-1 items-center gap-2 min-w-0">
-        <h1 className="truncate text-base font-semibold md:text-lg font-display">{title}</h1>
+        <h1 className="truncate text-base font-semibold md:text-lg font-display">
+          {title}
+        </h1>
       </div>
 
-      <Button variant="ghost" size="icon" onClick={toggle} aria-label="Toggle theme">
-        {theme === "light" ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={toggle}
+        aria-label="Toggle theme"
+      >
+        {theme === "light" ? (
+          <Moon className="h-4 w-4" />
+        ) : (
+          <Sun className="h-4 w-4" />
+        )}
       </Button>
 
       <DropdownMenu>
@@ -55,7 +66,9 @@ export function Topbar() {
               <AvatarImage src={profile} alt="Mark Vincent Roldan" />
               <AvatarFallback>MR</AvatarFallback>
             </Avatar>
-            <span className="hidden text-sm font-medium sm:inline">Mark V.</span>
+            <span className="hidden text-sm font-medium sm:inline">
+              Mark V.
+            </span>
             <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
           </Button>
         </DropdownMenuTrigger>

@@ -14,7 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import profile from "@/assets/profile.png";
+import profile from "@/assets/profile.jfif";
 
 const profileGrid = [
   { icon: Calendar, label: "Age", value: "22 years old" },

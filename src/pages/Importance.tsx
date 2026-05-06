@@ -32,96 +32,99 @@ export default function Importance() {
       title="Importance of the Internship"
       description="Molding Future IT Professionals through real-world experience and exposure."
     >
-      <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
-        <article className="prose prose-neutral max-w-none dark:prose-invert">
-          <p className="text-muted-foreground leading-relaxed">
-            Internship plays a vital role in molding future IT professionals by
-            providing students with practical experience and real-world exposure
-            to the field of information technology. It allows trainees to apply
-            the knowledge and skills they have learned in the classroom to
-            actual workplace tasks and responsibilities.
+      <div className="grid gap-8 lg:grid-cols-[1fr_340px]">
+        {/* MAIN */}
+        <article className="space-y-6 animate-fadeIn">
+          <p className="text-muted-foreground leading-relaxed text-[15px]">
+            Internships act as a vital bridge between classroom learning and
+            professional work. They allow students to apply theories into
+            real-world business environments and understand how industries
+            operate daily.
           </p>
 
-          <p className="text-muted-foreground leading-relaxed">
-            Through internship, students develop technical competencies,
-            problem-solving abilities, communication skills, and professional
-            work ethics that are essential in the IT industry. It also helps
-            them gain confidence, adapt to workplace environments, and
-            understand the expectations of their future careers.
+          <p className="text-muted-foreground leading-relaxed text-[15px]">
+            Beyond technical skills, internships develop communication,
+            teamwork, problem-solving, and professional ethics—skills that are
+            essential in any IT career.
           </p>
 
-          <Card className="my-6 border-l-4 border-l-primary bg-accent/40 p-6 not-prose">
+          {/* QUOTE */}
+          <Card className="border-l-4 border-l-primary bg-primary/5 p-6 transition-all hover:shadow-md">
             <Quote className="mb-3 h-6 w-6 text-primary" />
-            <p className="text-base font-medium italic">
-              "Internship is where knowledge meets reality and students become
-              professionals."
+            <p className="italic font-medium">
+              “Internship is where knowledge meets reality and students become
+              professionals.”
             </p>
           </Card>
 
-          <p className="text-muted-foreground leading-relaxed">
-            This experience makes students more prepared and competitive as
-            aspiring IT professionals, bridging the gap between academic
-            learning and real-world application.
+          <p className="text-muted-foreground leading-relaxed text-[15px]">
+            It builds confidence, resilience, and clarity in career direction by
+            exposing students to real projects, mentorship, and workplace
+            expectations.
           </p>
 
-          <h2 className="mt-8 text-xl font-bold font-display">
-            The Learning Cycle
-          </h2>
+          {/* STEPS */}
+          <h2 className="text-xl font-bold pt-4">The Learning Cycle</h2>
 
-          <div className="mt-4 grid gap-3 sm:grid-cols-2 not-prose">
+          <div className="grid gap-4 sm:grid-cols-2">
             {steps.map((s, i) => (
               <Card
                 key={s.title}
-                className="p-5 transition-all hover:shadow-soft"
+                className="p-5 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg animate-slideUp"
+                style={{ animationDelay: `${i * 0.08}s` }}
               >
-                <div className="flex items-start gap-3">
+                <div className="flex gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                     <s.icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    <p className="text-xs font-semibold uppercase text-muted-foreground">
                       Step {i + 1}
                     </p>
-                    <h3 className="mt-0.5 font-semibold">{s.title}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      {s.text}
-                    </p>
+                    <h3 className="font-semibold">{s.title}</h3>
+                    <p className="text-sm text-muted-foreground">{s.text}</p>
                   </div>
                 </div>
               </Card>
             ))}
           </div>
+
+          <p className="text-muted-foreground leading-relaxed text-[15px] pt-4">
+            This experience transforms students into industry-ready
+            professionals by giving them real exposure, hands-on practice, and a
+            deeper understanding of their chosen field.
+          </p>
         </article>
 
-        <aside className="space-y-4">
-          <Card className="p-6">
+        {/* SIDEBAR */}
+        <aside className="space-y-4 animate-fadeIn">
+          <Card className="p-6 hover:shadow-md transition-all">
             <h3 className="font-semibold">Quick Facts</h3>
             <dl className="mt-4 space-y-3 text-sm">
-              <div className="flex justify-between gap-4">
+              <div className="flex justify-between">
                 <dt className="text-muted-foreground">Required Hours</dt>
                 <dd className="font-medium">486 hrs</dd>
               </div>
-              <div className="flex justify-between gap-4">
+              <div className="flex justify-between">
                 <dt className="text-muted-foreground">Department</dt>
                 <dd className="font-medium">IT Services</dd>
               </div>
-              <div className="flex justify-between gap-4">
+              <div className="flex justify-between">
                 <dt className="text-muted-foreground">Setup</dt>
                 <dd className="font-medium">Hybrid</dd>
               </div>
-              <div className="flex justify-between gap-4">
+              <div className="flex justify-between">
                 <dt className="text-muted-foreground">Supervisor</dt>
                 <dd className="font-medium">IT Manager</dd>
               </div>
             </dl>
           </Card>
 
-          <Card className="border-primary/20 bg-primary/5 p-6">
+          <Card className="bg-primary/5 border-primary/20 p-6 transition-all hover:shadow-md">
             <h3 className="font-semibold text-primary">Why It Matters</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Internship is not just a requirement — it is the bridge between
-              academic learning and professional readiness, where students
-              transition into real IT practitioners.
+              Internship bridges academic learning and professional readiness,
+              shaping students into real-world IT practitioners.
             </p>
           </Card>
         </aside>

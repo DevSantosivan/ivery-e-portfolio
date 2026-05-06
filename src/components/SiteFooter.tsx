@@ -9,11 +9,16 @@ export function SiteFooter() {
             <Heart className="h-4 w-4" fill="currentColor" />
           </div>
           <div className="leading-tight">
-            <p className="font-semibold text-foreground">Philippine Red Cross</p>
+            <p className="font-semibold text-foreground">
+              Philippine Red Cross
+            </p>
             <p className="text-xs">Always First, Always Ready, Always There</p>
           </div>
         </div>
-        <p className="text-xs">© {new Date().getFullYear()} Mark Vincent Roldan · IT Internship E-Portfolio</p>
+        <p className="text-xs">
+          © {new Date().getFullYear()} Ivery Abegail Policarpio · IT Internship
+          E-Portfolio
+        </p>
       </div>
     </footer>
   );

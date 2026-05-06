@@ -58,35 +58,6 @@ export function Topbar() {
           <Sun className="h-4 w-4" />
         )}
       </Button>
-
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className="gap-2 px-2">
-            <Avatar className="h-7 w-7">
-              <AvatarImage src={profile} alt="Mark Vincent Roldan" />
-              <AvatarFallback>MR</AvatarFallback>
-            </Avatar>
-            <span className="hidden text-sm font-medium sm:inline">
-              Mark V.
-            </span>
-            <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-56">
-          <DropdownMenuLabel>
-            <div className="flex flex-col">
-              <span className="font-semibold">Mark Vincent Roldan</span>
-              <span className="text-xs text-muted-foreground">OJT Trainee</span>
-            </div>
-          </DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>Profile</DropdownMenuItem>
-          <DropdownMenuItem>Settings</DropdownMenuItem>
-          <DropdownMenuItem>Help</DropdownMenuItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>Sign out</DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
     </header>
   );
 }

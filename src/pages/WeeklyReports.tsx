@@ -2,45 +2,138 @@ import { PageShell } from "@/components/PageShell";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-const weeks = [
-  { week: 1, dates: "Jan 15 – Jan 19", focus: "Onboarding & Orientation", tasks: ["Orientation with the IT team", "Account setup and access provisioning", "Tour of the National HQ"], status: "Completed" },
-  { week: 2, dates: "Jan 22 – Jan 26", focus: "Tooling & Codebase", tasks: ["Setup of dev environment (Node, Vite, Git)", "Walkthrough of internal repos", "First small bug fix on staff portal"], status: "Completed" },
-  { week: 3, dates: "Jan 29 – Feb 02", focus: "UI Components", tasks: ["Built reusable card components", "Refactored shared form layouts"], status: "Completed" },
-  { week: 4, dates: "Feb 05 – Feb 09", focus: "Internal Dashboard", tasks: ["Implemented filter UI for staff list", "Improved table responsiveness"], status: "Completed" },
-  { week: 5, dates: "Feb 12 – Feb 16", focus: "Documentation Sprint", tasks: ["Wrote setup docs for new trainees", "Standardized README templates"], status: "Completed" },
-  { week: 6, dates: "Feb 19 – Feb 23", focus: "Support Rotation", tasks: ["Shadowed end-user support tickets", "Documented common issues + fixes"], status: "Completed" },
-  { week: 7, dates: "Feb 26 – Mar 01", focus: "Accessibility Pass", tasks: ["Audited color contrast", "Improved keyboard navigation"], status: "Completed" },
-  { week: 8, dates: "Mar 04 – Mar 08", focus: "Mid-Internship Review", tasks: ["Self-assessment and feedback session", "Goal recalibration with supervisor"], status: "Completed" },
-  { week: 9, dates: "Mar 11 – Mar 15", focus: "Reports Module", tasks: ["Designed weekly report layout", "Connected mock data preview"], status: "Completed" },
-  { week: 10, dates: "Mar 18 – Mar 22", focus: "Polish & Performance", tasks: ["Reduced bundle size on dashboard", "Lazy-loaded heavy routes"], status: "Completed" },
-  { week: 11, dates: "Mar 25 – Mar 29", focus: "QA Cycle", tasks: ["Manual cross-browser testing", "Logged & triaged 12 issues"], status: "Completed" },
-  { week: 12, dates: "Apr 01 – Apr 05", focus: "E-Portfolio Build", tasks: ["Started this E-Portfolio app", "Drafted page structure & content"], status: "Completed" },
-  { week: 13, dates: "Apr 08 – Apr 12", focus: "Handover Prep", tasks: ["Wrote handover docs", "Recorded loom-style walkthroughs"], status: "Completed" },
-  { week: 14, dates: "Apr 15 – Apr 19", focus: "Final Review", tasks: ["Stakeholder demo", "Feedback consolidation"], status: "Completed" },
-  { week: 15, dates: "Apr 22 – Apr 28", focus: "Wrap-up", tasks: ["Final exit interview", "Submission of deliverables"], status: "Ongoing" },
+const reports = [
+  {
+    period: "JAN 29 - FEB 27, 2026",
+    data: [
+      {
+        obj: "Mastered the operational framework of the Blood Management Service through a comprehensive orientation and a deep dive into the official Fact Book.",
+        work: "Completed orientation with Ma’am Christine; received official booklet and Fact Book.",
+        problem: "None",
+      },
+      {
+        obj: "Compiled critical infrastructure data, including road networks and hazard maps to enhance the organization's logistical and emergency readiness.",
+        work: "Completed data gathering (roads, schools, bridges, hazard maps, etc.)",
+        problem:
+          "Making sure that all the data we encode on the fact book is validated and working.",
+      },
+      {
+        obj: "Designed and edited high-impact flyers to drive engagement for Mobile Blood Donation campaigns under the direction of the team lead.",
+        work: "Successfully created and edited flyers assigned by Sir Ado.",
+        problem: "None",
+      },
+      {
+        obj: "Applied practical emergency skills by assisting with and auditing bandaging techniques during live events.",
+        work: "Created the standee tarpaulin design.",
+        problem: "None",
+      },
+      {
+        obj: "Streamlined data integrity and organizational efficiency through high-volume encoding and database management.",
+        work: "Assisted and reviewed bandaging procedures.",
+        problem: "None",
+      },
+    ],
+  },
+  {
+    period: "MAR 1 - APR 27, 2026",
+    data: [
+      {
+        obj: "Maintained high-level oversight of medical supplies and equipment to ensure operational readiness at all times.",
+        work: "Conducted a comprehensive audit and verification of medical equipment and supplies.",
+        problem: "None",
+      },
+      {
+        obj: "Advanced my proficiency in First Aid and CPR while actively participating in the evaluation of trainees.",
+        work: "Facilitated bandaging workshops and managed performance evaluation.",
+        problem: "None",
+      },
+      {
+        obj: "Transitioned from theory to practice by applying life-saving skills in real-world settings.",
+        work: "Stationed at First Aid unit under Sir Harold and Sir Cirillo.",
+        problem: "None",
+      },
+      {
+        obj: "Assisted in logistical preparation of blood donation sites.",
+        work: "Created standee tarpaulin design.",
+        problem: "None",
+      },
+      {
+        obj: "Provided immediate first aid response during community events.",
+        work: "Provided on-site first aid assistance and coordinated care.",
+        problem: "None",
+      },
+      {
+        obj: "Contributed to successful Mobile Blood Donation drives.",
+        work: "Assisted in execution of community activity.",
+        problem: "None",
+      },
+      {
+        obj: "Managed systematic archiving and filing of sensitive records.",
+        work: "Sorted and archived organizational files for data accessibility.",
+        problem: "None",
+      },
+    ],
+  },
 ];
 
 export default function WeeklyReports() {
   return (
-    <PageShell eyebrow="III. Work Experiences" title="Weekly Reports" description="A week-by-week journal of tasks, focus, and progress.">
-      <div className="grid gap-4">
-        {weeks.map((w) => (
-          <Card key={w.week} className="p-5 transition-all hover:shadow-soft">
-            <div className="flex flex-wrap items-start justify-between gap-3">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-primary">Week {w.week} · {w.dates}</p>
-                <h3 className="mt-1 font-semibold">{w.focus}</h3>
-              </div>
-              <Badge variant={w.status === "Ongoing" ? "default" : "secondary"}>{w.status}</Badge>
+    <PageShell
+      eyebrow="III. Work Experiences"
+      title="Weekly Accomplishment Report"
+      description="Formal weekly documentation of internship activities."
+    >
+      <div className="space-y-10">
+        {/* Header Info */}
+        <Card className="p-5 text-sm leading-relaxed">
+          <p>
+            <b>Name:</b> Ivery Abegail M. Policarpio
+          </p>
+          <p>
+            <b>Date:</b> April 26, 2026
+          </p>
+          <p>
+            <b>Internship Site:</b> Philippine Red Cross Occidental Mindoro
+            Chapter
+          </p>
+          <p>
+            <b>Location:</b> Del Pilar St., Brgy. 7, San Jose, Occidental
+            Mindoro
+          </p>
+          <p>
+            <b>Hours Completed:</b> 494 Hours
+          </p>
+        </Card>
+
+        {reports.map((report, i) => (
+          <Card key={i} className="p-5 space-y-4">
+            {/* Period Header */}
+            <div className="font-semibold text-primary">
+              From: {report.period}
             </div>
-            <ul className="mt-3 grid gap-1.5 text-sm text-muted-foreground sm:grid-cols-2">
-              {w.tasks.map((t) => (
-                <li key={t} className="flex gap-2">
-                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary" />
-                  <span>{t}</span>
-                </li>
-              ))}
-            </ul>
+
+            {/* Table Header */}
+            <div className="grid grid-cols-3 font-semibold border-b pb-2">
+              <div>Objectives</div>
+              <div>Work Status</div>
+              <div>Problems Met</div>
+            </div>
+
+            {/* Table Rows */}
+            {report.data.map((row, idx) => (
+              <div
+                key={idx}
+                className="grid grid-cols-3 gap-4 text-sm border-b py-3"
+              >
+                <div>{row.obj}</div>
+                <div>{row.work}</div>
+                <div>{row.problem}</div>
+              </div>
+            ))}
+
+            <div className="flex justify-end">
+              <Badge variant="secondary">Completed</Badge>
+            </div>
           </Card>
         ))}
       </div>

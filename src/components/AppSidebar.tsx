@@ -36,9 +36,17 @@ const groups = [
   {
     label: "I. Introduction",
     items: [
-      { title: "Importance of Internship", url: "/introduction/importance", icon: BookOpen },
+      {
+        title: "Importance of Internship",
+        url: "/introduction/importance",
+        icon: BookOpen,
+      },
       { title: "Objectives", url: "/introduction/objectives", icon: Target },
-      { title: "Time and Place", url: "/introduction/time-and-place", icon: Calendar },
+      {
+        title: "Time and Place",
+        url: "/introduction/time-and-place",
+        icon: Calendar,
+      },
     ],
   },
   {
@@ -55,9 +63,21 @@ const groups = [
     label: "III. Work Experiences",
     items: [
       { title: "Weekly Reports", url: "/work/weekly-reports", icon: FileText },
-      { title: "Daily Time Record", url: "/work/daily-time-record", icon: Clock },
-      { title: "Progress Report", url: "/work/progress-report", icon: TrendingUp },
-      { title: "Analysis Report", url: "/work/analysis-report", icon: BarChart3 },
+      {
+        title: "Daily Time Record",
+        url: "/work/daily-time-record",
+        icon: Clock,
+      },
+      {
+        title: "Progress Report",
+        url: "/work/progress-report",
+        icon: TrendingUp,
+      },
+      {
+        title: "Analysis Report",
+        url: "/work/analysis-report",
+        icon: BarChart3,
+      },
     ],
   },
 ];
@@ -69,7 +89,8 @@ const bottom = [
 
 export function AppSidebar() {
   const { pathname } = useLocation();
-  const isActive = (url: string) => (url === "/" ? pathname === "/" : pathname.startsWith(url));
+  const isActive = (url: string) =>
+    url === "/" ? pathname === "/" : pathname.startsWith(url);
 
   const linkCls = (active: boolean) =>
     `flex items-center gap-3 rounded-md px-2 py-2 text-sm transition-colors ${
@@ -86,8 +107,12 @@ export function AppSidebar() {
             <Heart className="h-5 w-5" fill="currentColor" />
           </div>
           <div className="flex flex-col leading-tight">
-            <span className="text-sm font-bold text-sidebar-foreground">E-Portfolio</span>
-            <span className="text-xs text-muted-foreground">Mark Vincent Roldan</span>
+            <span className="text-sm font-bold text-sidebar-foreground">
+              E-Portfolio
+            </span>
+            <span className="text-xs text-muted-foreground">
+              Ivery Abegail Policarpio
+            </span>
           </div>
         </div>
       </SidebarHeader>
@@ -98,7 +123,11 @@ export function AppSidebar() {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <NavLink to={overview.url} end className={linkCls(isActive(overview.url))}>
+                  <NavLink
+                    to={overview.url}
+                    end
+                    className={linkCls(isActive(overview.url))}
+                  >
                     <overview.icon className="h-4 w-4 shrink-0" />
                     <span>{overview.title}</span>
                   </NavLink>
@@ -118,7 +147,10 @@ export function AppSidebar() {
                 {g.items.map((item) => (
                   <SidebarMenuItem key={item.url}>
                     <SidebarMenuButton asChild>
-                      <NavLink to={item.url} className={linkCls(isActive(item.url))}>
+                      <NavLink
+                        to={item.url}
+                        className={linkCls(isActive(item.url))}
+                      >
                         <item.icon className="h-4 w-4 shrink-0" />
                         <span>{item.title}</span>
                       </NavLink>
@@ -136,7 +168,10 @@ export function AppSidebar() {
               {bottom.map((item) => (
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton asChild>
-                    <NavLink to={item.url} className={linkCls(isActive(item.url))}>
+                    <NavLink
+                      to={item.url}
+                      className={linkCls(isActive(item.url))}
+                    >
                       <item.icon className="h-4 w-4 shrink-0" />
                       <span>{item.title}</span>
                     </NavLink>
@@ -154,7 +189,9 @@ export function AppSidebar() {
             <Heart className="h-4 w-4" fill="currentColor" />
           </div>
           <div className="text-xs leading-tight">
-            <p className="font-semibold text-sidebar-foreground">Philippine Red Cross</p>
+            <p className="font-semibold text-sidebar-foreground">
+              Philippine Red Cross
+            </p>
             <p className="text-muted-foreground">Always First, Always Ready</p>
           </div>
         </div>

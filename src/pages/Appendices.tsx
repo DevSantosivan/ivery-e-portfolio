@@ -64,6 +64,10 @@ import officeWork15 from "@/assets/Appendix/o-picture-during-work/15.jpeg";
 import officeWork16 from "@/assets/Appendix/o-picture-during-work/16.jpeg";
 import officeWork17 from "@/assets/Appendix/o-picture-during-work/17.jpeg";
 
+import cv1 from "@/assets/cv1.png";
+import cv2 from "@/assets/cv2.png";
+import cv3 from "@/assets/cv3.png";
+
 const appendices = [
   {
     id: "A",
@@ -175,21 +179,26 @@ const appendices = [
     ],
   },
 
+  // {
+  //   id: "O",
+  //   title: "Code of Ethics for CAST Student Internship",
+  //   icon: FileText,
+  //   images: [officeWork1],
+  // },
+
   {
-    id: "O",
-    title: "Code of Ethics for CAST Student Internship",
+    id: "P",
+    title: "Curriculum Vitae",
     icon: FileText,
-    images: [officeWork1],
+    images: [cv1, cv2, cv3],
   },
 
-  { id: "P", title: "Curriculum Vitae", icon: FileText, images: [officeWork2] },
-
-  {
-    id: "Q",
-    title: "On-the-Job Training Portfolio Evaluation Form",
-    icon: ClipboardList,
-    images: [officeWork3],
-  },
+  // {
+  //   id: "Q",
+  //   title: "On-the-Job Training Portfolio Evaluation Form",
+  //   icon: ClipboardList,
+  //   images: [officeWork3],
+  // },
 ];
 
 export default function Appendices() {
@@ -331,6 +340,152 @@ export default function Appendices() {
           )}
         </div>
       )}
+
+      <div className="mt-6 rounded-2xl border bg-card shadow-lg overflow-hidden">
+        {/* HEADER (MATCHES APP THEME) */}
+        <div className="bg-primary/10 px-6 py-6 space-y-2 border-b">
+          <h1 className="text-2xl font-bold tracking-wide text-primary">
+            APPENDIX O
+          </h1>
+
+          <h2 className="text-lg font-semibold">
+            Code of Ethics for CAST Student Internship
+          </h2>
+
+          <p className="text-sm text-muted-foreground max-w-3xl">
+            Ethical guidelines and professional responsibilities of CAST student
+            interns in information technology practice.
+          </p>
+        </div>
+
+        <div className="p-6 space-y-5 text-sm leading-relaxed text-muted-foreground">
+          <p>
+            <span className="font-semibold text-foreground">Preamble:</span> I
+            will use my special knowledge for the benefit of the public. I will
+            serve employees and clients with integrity, subject to an overriding
+            responsibility to the public interest, and I will strive to enhance
+            the competence and prestige of the profession.
+          </p>
+
+          <div className="space-y-2">
+            <p className="font-semibold text-foreground">By these means:</p>
+
+            <ol className="list-decimal pl-5 space-y-2">
+              <li>
+                I will promote public knowledge understanding and appreciation
+                of information technology.
+              </li>
+              <li>
+                I will consider the general welfare and public good in the
+                performance of my work.
+              </li>
+              <li>
+                I will advertise goods or professional services in a clear and
+                truthful manner.
+              </li>
+              <li>
+                I will comply and strictly abide by the intellectual property
+                laws, patent laws and other related laws on respect of
+                information technology.
+              </li>
+              <li>
+                I will accept full responsibility for the work undertaken and
+                utilize skills with competence and professionalism.
+              </li>
+              <li>
+                I will make truthful statement on my areas of competence as well
+                as the capabilities and qualities of my products or services.
+              </li>
+              <li>
+                I will not disclose any confidential information obtained in the
+                course of professional duties without the consent of the parties
+                concerned, except when required by law.
+              </li>
+              <li>
+                I will try to attain the highest quality in both the products
+                and services that I offer.
+              </li>
+              <li>
+                I will not knowingly participate in the development of
+                information technology system that promotes unlawful acts.
+              </li>
+              <li>
+                I will uphold and improve the IT profession standard through
+                continuing professional development.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div className="mt-6 rounded-2xl border bg-card shadow-lg overflow-hidden">
+        {/* HEADER (MATCHES APP THEME) */}
+        <div className="bg-primary/10 px-6 py-6 space-y-2 border-b">
+          <h1 className="text-2xl font-bold tracking-wide text-primary">
+            APPENDIX Q
+          </h1>
+
+          <h2 className="text-lg font-semibold">
+            On-the-Job Training Portfolio Evaluation Form
+          </h2>
+
+          <p className="text-sm text-muted-foreground max-w-3xl">
+            Official form used to evaluate this OJT portfolio submission.
+          </p>
+        </div>
+
+        <div className="p-6">
+          {/* HEADER ROW */}
+          <div className="grid grid-cols-12 font-bold text-primary border-b pb-3">
+            <div className="col-span-8">Criteria</div>
+            <div className="col-span-2 text-right">Percent</div>
+            <div className="col-span-2 text-right">Rating</div>
+          </div>
+
+          {/* ROW 1 */}
+          <div className="grid grid-cols-12 items-start mt-4">
+            <div className="col-span-8">
+              <p className="font-bold">1. Quality of Contents</p>
+              <div className="pl-5 mt-1 text-muted-foreground">
+                <p>• Grammar</p>
+                <p>• Organization</p>
+              </div>
+            </div>
+
+            <div className="col-span-2 text-right font-bold text-primary">
+              60%
+            </div>
+
+            <div className="col-span-2 text-right text-muted-foreground"></div>
+          </div>
+
+          {/* ROW 2 */}
+          <div className="grid grid-cols-12 items-start mt-6">
+            <div className="col-span-8">
+              <p className="font-bold">2. Quality of Format</p>
+              <div className="pl-5 mt-1 text-muted-foreground">
+                <p>• Spacing</p>
+                <p>• Margins</p>
+                <p>• Heading</p>
+                <p>• Typeset & Paging</p>
+                <p>• Tables and Pictures</p>
+              </div>
+            </div>
+
+            <div className="col-span-2 text-right font-bold text-primary">
+              40%
+            </div>
+
+            <div className="col-span-2 text-right text-muted-foreground"></div>
+          </div>
+
+          {/* TOTAL */}
+          <div className="border-t pt-4 mt-6 grid grid-cols-12 font-bold text-lg">
+            <div className="col-span-8">General Average:</div>
+            <div className="col-span-2 text-right">100%</div>
+            <div className="col-span-2 text-right text-green-600"></div>
+          </div>
+        </div>
+      </div>
     </PageShell>
   );
 }

@@ -6,7 +6,7 @@ const items = [
   {
     icon: CalendarDays,
     label: "Duration",
-    value: "February 2, 2025 — April 25, 2025",
+    value: "January 29 2026 - April 27, 2026",
   },
   {
     icon: Clock,
@@ -21,7 +21,7 @@ const items = [
   {
     icon: MapPin,
     label: "Total Hours",
-    value: "489 Hours Completed",
+    value: "486 Hours Completed",
   },
 ];
 

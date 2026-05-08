@@ -114,8 +114,8 @@ export default function Importance() {
                 <dd className="font-medium">Hybrid</dd>
               </div>
               <div className="flex justify-between">
-                <dt className="text-muted-foreground">Supervisor</dt>
-                <dd className="font-medium">IT Manager</dd>
+                <dt className="text-muted-foreground">OIC</dt>
+                <dd className="font-medium">Officer In charge</dd>
               </div>
             </dl>
           </Card>
